@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przebieg zmienności funkcji</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Przebieg zmienności funkcji</h1>
+        
+    </header>
+    <main>
+            <p>$$f(x) = \frac{2x^2+3x-2}{x^3+5x^2+6x}$$</p>
+        <section>
+            <h2>1) Dziedzina funkcji</h2>
+            <div>$$x^3+5x^2+6x\neq 0$$</div>
+            <div>
+                $$x(x^2+5x+6)\neq 0$$
+                $$x\neq 0~~\wedge~~x^2+5x+6\neq 0$$
+                $$\qquad\qquad(x+3)(x+2)\neq 0 $$
+                $$\qquad\qquad~~x\neq-3~~\wedge~~x\neq-2$$
+                $$D_f\in~\mathbb{R}\backslash\left\{-3,-2,0\right\}$$
+            </div>
+        </section>
+        <section>
+            <h2>2) Miejsca zerowe</h2>
+            <div>$$\frac{2x^2+3x-2}{x^3+5x^2+6x}=0$$</div>
+            <div>
+                $$2x^2+3x-2=0$$
+                $$\Delta = 3*3 - 4*2*(-2)=9 + 16 = 25$$
+                $$\sqrt{\Delta} = 5$$
+                $$x_1 =\frac{-3-5}{2*2}=\frac{-8}{4}=-2~~,~~x_2=\frac{-3+5}{2*2}=\frac{2}{4}=\frac{1}{2}$$
+                $$x_1 \notin D_f$$
+                <p>$$Miejsce~zerowe~w~x=\frac{1}{2}$$</p>
+            </div>
+        </section>
+        <section>
+            <h2>3) Punkt przecięcia z OY</h2>
+            <div>$$Nie~istnieje, 0 \notin D_f$$</div>
+        </section>
+        <section>
+            <h2>4) Parzystość/Nieparzystość</h2>
+            <div>
+                $$f(-x)\neq f(x)$$
+                $$-f(x)\neq f(x)$$
+                $$Ani~parzysta,~ani~nieparzysta$$
+            </div>
+        </section>
+        <section>
+            <h2>5) Granice</h2>
+            <div>
+                $$\lim_{x\to \infty}f(x)=\lim_{x\to \infty}\frac{2x^2+3x-2}{x^3+5x^2+6x}=\lim_{x\to\infty}\frac{x^3\left(\frac{2}{x}+\frac{3}{x^2}-\frac{2}{x^3}\right)}{x^3\left(1+\frac{5}{x}+\frac{6}{x^2}\right)}=\frac{0}{1}=0$$
+                $$\lim_{x\to -\infty}f(x)=\lim_{x\to -\infty}\frac{2x^2+3x-2}{x^3+5x^2+6x}=\lim_{x\to-\infty}\frac{x^3\left(\frac{2}{x}+\frac{3}{x^2}-\frac{2}{x^3}\right)}{x^3\left(1+\frac{5}{x}+\frac{6}{x^2}\right)}=\frac{0}{1}=0$$
+                $$\lim_{x\to 0^+}f(x)\stackrel{[\frac{-2}{0^+}]}{=}-\infty$$
+                $$\lim_{x\to 0^-}f(x)\stackrel{[\frac{-2}{0^-}]}{=}\infty$$
+                $$\lim_{x\to -2^+}f(x)\stackrel{[\frac{0}{0^+}]}{=}0$$
+                $$\lim_{x\to -2^-}f(x)\stackrel{[\frac{0}{0^-}]}{=}0$$
+                $$\lim_{x\to -3^+}f(x)\stackrel{[\frac{7}{0^+}]}{=}\infty$$
+                $$\lim_{x\to -3^-}f(x)\stackrel{[\frac{7}{0^-}]}{=}-\infty$$
+            </div>
+        </section>
+        <section>
+            <h2>6) Asymptoty</h2>
+            <div>
+                $$pozioma: y=0$$
+                $$pionowa: x=-3, x=0$$
+                $$ukośna: brak$$
+            </div>
+        </section>
+        <section>
+            <h2>7) Monotonicznosć</h2>
+            <div>
+                $$f'(x)=\frac{(4x+3)(x^3+5x^2+6x)-(2x^2+3x-2)(3x^2+10x+6)}{(x^3+5x^2+6x)^2}=$$
+                $$=\frac{4x^4+20x^3+24x^2+3x^3+15x^2+18x-(6x^4+29x^3+36x^2-2x-12)}{(x(x^2+5x+6))^2}=$$
+                $$=\frac{-2x^4-6x^3+3x^2+20x+12}{(x(x+2)(x+3))^2}=\frac{-2x^4-4x^3-2x^3-4x^2+7x^2+14x+6x+12}{x^2(x+2)^2(x+3)^2}=$$
+                $$=\frac{-2x^3(x+2)-2x^2(x+2)+7x(x+2)+6(x+2}{x^2(x+2)^2(x+3)^2}=$$
+                $$=\frac{-(x+2)(2x^3+2x^2-7x-6)}{x^2(x+2)^2(x+3)^2}=\frac{-(2x^3+2x^2-7x-6)}{x^2(x+2)(x+3)^2}$$
+                $$=\frac{-(2x^3+4x^2-2x^2-4x-3x-6)}{x^2(x+2)(x+3)^2}=\frac{-(2x^2(x+2)-2x(x+2)-3(x+2)}{x^2(x+2)(x+3)^2}=$$
+                $$=\frac{-(x+2)(2x^2-2x-3)}{x^2(x+2)(x+3)^2}=\frac{-(2x^2-2x-3)}{x^2(x+3)^2}=\frac{(-2x^2+2x+3)}{(x^2+3x)^2}$$
+            </div>
+            <div>
+                $$D_f=D_f'$$
+                $$\mathop{\forall}_{x\in D_f}(x^2+3x)^2>0$$
+                $$Znak~pochodnej~zależy~od~licznika$$
+            </div>
+            <div>
+                $$-2x^2+2x+3=0$$
+                $$\Delta=2^2-4*(-2)*3=4+24=28 \qquad \sqrt{\Delta}=2\sqrt{7}$$
+                $$x_1=\frac{-2-2\sqrt{7}}{-4}=\frac{1+\sqrt{7}}{2} \qquad x_2=\frac{-2+2\sqrt{7}}{-4}=\frac{1-\sqrt{7}}{2}$$
+            </div>
+            <div>
+                $$f\nearrow \left\langle \frac{1-\sqrt{7}}{2}, 0\right),~\left(0, \frac{1+\sqrt{7}}{2} \right\rangle$$
+                $$f\searrow (-\infty,-3),~(-3,-2),~\left(-2,\frac{1-\sqrt{7}}{2} \right\rangle, \left\langle \frac{1+\sqrt{7}}{2},\infty \right)$$
+            </div>
+        </section>
+        <section>
+            <h2>8) Ekstremum</h2>
+            <div>
+                $$Dla~~y_{max}=f\left(\frac{1+\sqrt{7}}{2}\right)=\frac{8-2\sqrt{7}}{9}$$
+                $$Dla~~y_{min}=f\left(\frac{1-\sqrt{7}}{2}\right)=\frac{8+2\sqrt{7}}{9}$$
+            </div>
+        </section>
+        <section>
+            <h2>9) Tabelka</h2>
+            <div>$$\begin{array}{|c|c|c|} 
+                \hline
+                x & (-\infty,-3) & -3 & (-3,-2) & -2 & (-2,\frac{1-\sqrt{7}}{2}) & \frac{1-\sqrt{7}}{2} & (\frac{1-\sqrt{7}}{2},0) & 0 & (0,\frac{1+\sqrt{7}}{2}) & \frac{1+\sqrt{7}}{2} & (\frac{1+\sqrt{7}}{2},\infty) \\ \hline
+                f'(x) & - & \times & - & \times & - & 0 & + & \times & + & 0 & - \\ \hline
+                f(x) & \searrow & \times & \searrow & \times & \searrow & \frac{8+2\sqrt{7}}{9} & \nearrow & \times & \nearrow & \frac{8-2\sqrt{7}}{9} & \searrow \\ \hline
+                \end{array}$$</div>
+        </section>
+        <section>
+            <h2>10) Wykres</h2>
+            <div>
+                <h4>Tak jak powinnien wyglądać</h4>
+               <img src="./css/Screenshot 2022-04-24 223825.jpg"/>
+               <br/>
+               <h4>Tak jak wygląda po narysowaniu</h4>
+                <img src="./css/81249CED-1CDD-4CD5-8957-CDFAC916FB71.jpeg"/>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
